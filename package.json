@@ -1,0 +1,17 @@
+{
+  "name": "gurukul",
+  "version": "1.0.0",
+  "description": "Application to manage management-parent-student cycle",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Navaneeth R, Rajasekar M",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.13.3",
+    "redis": "^2.4.2",
+    "socket.io": "^1.3.7",
+    "underscore": "^1.8.3"
+  }
+}

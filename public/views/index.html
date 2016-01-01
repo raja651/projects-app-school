@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel='stylesheet' href='../styles/home.css'></link>
+	<link rel='stylesheet' href='../styles/main.css'></link>
+	<link rel='stylesheet' href='../styles/loginControl.css'></link>
+	<title>
+		Gurukul
+	</title>
+	<link rel="icon" href="../images/icon.png" />
+</head>
+<body ng-app='home'>
+	<header>
+	</header>
+	<section>
+		<aside class='users' ng-controller='userRoleDisplayController as roleDispCtrl'>
+			<ul>
+				<li class='roles' ng-repeat='userRole in roleDispCtrl.userRoles' ng-show='roleDispCtrl.isSelectedRole(	userRole.role_id)'
+			 	ng-click='roleDispCtrl.selectRole(userRole.role_id)'>
+					{{userRole.role_type}}				
+				</li>
+				<li ng-show="roleDispCtrl.showRoleExpander()">
+					<user-login>
+					</user-login>
+				</li>
+				<li class="roleExpander" ng-show="roleDispCtrl.showRoleExpander()" ng-click="roleDispCtrl.expandAllRoles()	">
+				</li>
+			</ul>		
+		</aside>
+		<main>			
+		</main>	
+	<section>
+	<script charset="utf-8" src="../scripts/JS Frameworks/angular.min.js"></script>
+	<script charset="utf-8" src="../scripts/index.js"></script>
+	<script charset="utf-8" src="../scripts/controllers/userRoleController.js"></script>
+</body>	
+</html>
